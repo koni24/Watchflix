@@ -16,7 +16,7 @@ function App() {
   const { url } = useSelector((state) => state.home);
   console.log(url);
   useEffect(() => {
-    fetchApiConfig();
+    fetchApiConfig( );
   }, []);
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
@@ -31,7 +31,7 @@ function App() {
   };
   return (
     <BrowserRouter>
-      {/* <Header/> */}
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
